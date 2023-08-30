@@ -30,11 +30,6 @@ class ApiService {
     }
 }
 
-struct Joke: Decodable {
-    let value: String
-    let id: String
-}
-
 enum ApiError: Error {
     case invalidUrl
     case invalidRespone
