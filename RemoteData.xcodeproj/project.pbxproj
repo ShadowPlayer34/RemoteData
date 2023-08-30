@@ -7,22 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C22B6C12A9F621C00BA19E0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C22B6C02A9F621C00BA19E0 /* Models.swift */; };
+		3C22B6C42A9F7B2D00BA19E0 /* FavoritesJokes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C22B6C22A9F7B2C00BA19E0 /* FavoritesJokes.xcdatamodeld */; };
+		3C22B6C62A9F7CEA00BA19E0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C22B6C52A9F7CEA00BA19E0 /* DataManager.swift */; };
+		3C22B6C82A9F892700BA19E0 /* OnlyFavJokeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C22B6C72A9F892700BA19E0 /* OnlyFavJokeRow.swift */; };
 		3CAF5CF32A9E6DD100D56FC3 /* RemoteDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF5CF22A9E6DD100D56FC3 /* RemoteDataApp.swift */; };
 		3CAF5CF52A9E6DD100D56FC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF5CF42A9E6DD100D56FC3 /* ContentView.swift */; };
 		3CAF5CF72A9E6DDA00D56FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CAF5CF62A9E6DDA00D56FC3 /* Assets.xcassets */; };
 		3CAF5CFA2A9E6DDA00D56FC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CAF5CF92A9E6DDA00D56FC3 /* Preview Assets.xcassets */; };
 		3CAF5D012A9E6F0300D56FC3 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF5D002A9E6F0300D56FC3 /* Network.swift */; };
-		3CAF5D032A9E719900D56FC3 /* CustomRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF5D022A9E719800D56FC3 /* CustomRow.swift */; };
+		3CAF5D052A9F544700D56FC3 /* JokeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAF5D042A9F544700D56FC3 /* JokeRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C22B6C02A9F621C00BA19E0 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		3C22B6C32A9F7B2D00BA19E0 /* FavoritesJokes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoritesJokes.xcdatamodel; sourceTree = "<group>"; };
+		3C22B6C52A9F7CEA00BA19E0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		3C22B6C72A9F892700BA19E0 /* OnlyFavJokeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyFavJokeRow.swift; sourceTree = "<group>"; };
 		3CAF5CEF2A9E6DD100D56FC3 /* RemoteData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CAF5CF22A9E6DD100D56FC3 /* RemoteDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataApp.swift; sourceTree = "<group>"; };
 		3CAF5CF42A9E6DD100D56FC3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3CAF5CF62A9E6DDA00D56FC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CAF5CF92A9E6DDA00D56FC3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3CAF5D002A9E6F0300D56FC3 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		3CAF5D022A9E719800D56FC3 /* CustomRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRow.swift; sourceTree = "<group>"; };
+		3CAF5D042A9F544700D56FC3 /* JokeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +44,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C22B6C92A9F8D0700BA19E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3CAF5CF42A9E6DD100D56FC3 /* ContentView.swift */,
+				3CAF5D042A9F544700D56FC3 /* JokeRow.swift */,
+				3C22B6C72A9F892700BA19E0 /* OnlyFavJokeRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		3CAF5CE62A9E6DD000D56FC3 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +74,11 @@
 			isa = PBXGroup;
 			children = (
 				3CAF5CF22A9E6DD100D56FC3 /* RemoteDataApp.swift */,
-				3CAF5CF42A9E6DD100D56FC3 /* ContentView.swift */,
-				3CAF5D022A9E719800D56FC3 /* CustomRow.swift */,
 				3CAF5D002A9E6F0300D56FC3 /* Network.swift */,
+				3C22B6C02A9F621C00BA19E0 /* Models.swift */,
+				3C22B6C52A9F7CEA00BA19E0 /* DataManager.swift */,
+				3C22B6C92A9F8D0700BA19E0 /* Views */,
+				3C22B6C22A9F7B2C00BA19E0 /* FavoritesJokes.xcdatamodeld */,
 				3CAF5CF62A9E6DDA00D56FC3 /* Assets.xcassets */,
 				3CAF5CF82A9E6DDA00D56FC3 /* Preview Content */,
 			);
@@ -144,9 +164,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CAF5CF52A9E6DD100D56FC3 /* ContentView.swift in Sources */,
-				3CAF5D032A9E719900D56FC3 /* CustomRow.swift in Sources */,
+				3C22B6C82A9F892700BA19E0 /* OnlyFavJokeRow.swift in Sources */,
+				3C22B6C62A9F7CEA00BA19E0 /* DataManager.swift in Sources */,
+				3CAF5D052A9F544700D56FC3 /* JokeRow.swift in Sources */,
 				3CAF5CF32A9E6DD100D56FC3 /* RemoteDataApp.swift in Sources */,
 				3CAF5D012A9E6F0300D56FC3 /* Network.swift in Sources */,
+				3C22B6C42A9F7B2D00BA19E0 /* FavoritesJokes.xcdatamodeld in Sources */,
+				3C22B6C12A9F621C00BA19E0 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,8 +310,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -316,8 +340,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -354,6 +378,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3C22B6C22A9F7B2C00BA19E0 /* FavoritesJokes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3C22B6C32A9F7B2D00BA19E0 /* FavoritesJokes.xcdatamodel */,
+			);
+			currentVersion = 3C22B6C32A9F7B2D00BA19E0 /* FavoritesJokes.xcdatamodel */;
+			path = FavoritesJokes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3CAF5CE72A9E6DD000D56FC3 /* Project object */;
 }

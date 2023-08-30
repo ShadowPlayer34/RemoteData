@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    let api = ApiService()
+    private let api = ApiService()
+    @FetchRequest(sortDescriptors: []) var favoriteJokes: FetchedResults<FavJokes>
     @State var jokes: [Joke] = []
     @State var isOnlyFavorities: Bool = false
     @State var isLoading: Bool = true
     @State var isError: Bool = false
-    @State var errorReason: ApiError? = nil
+    
     var body: some View {
         VStack {
             HStack {
@@ -23,6 +24,7 @@ struct ContentView: View {
                 } label: {
                     Text(isOnlyFavorities ? "All" : "Favorites")
                 }
+                .padding()
             }
             if isLoading {
                 Spacer()
@@ -30,8 +32,14 @@ struct ContentView: View {
                 Spacer()
             } else {
                 List {
-                    ForEach(jokes, id: \.id) { joke in
-                        CustomRow(joke: joke)
+                    if isOnlyFavorities {
+                        ForEach(favoriteJokes) { joke in
+                            OnlyFavJokeRow(favJoke: joke)
+                        }
+                    } else {
+                        ForEach(jokes, id: \.id) { joke in
+                            JokeRow(joke: joke)
+                        }
                     }
                 }
                 .listStyle(.grouped)
@@ -45,13 +53,14 @@ struct ContentView: View {
             await refresh()
             isLoading = false
         }
+        .alert("Unexpected network error", isPresented: $isError) {}
     }
     
     private func refresh() async {
         do {
             jokes = try await api.fetchJokes()
         } catch {
-            
+            isError = true
         }
     }
 }
