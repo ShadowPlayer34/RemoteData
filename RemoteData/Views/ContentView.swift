@@ -34,7 +34,7 @@ struct ContentView: View {
                 List {
                     if isOnlyFavorities {
                         ForEach(favoriteJokes) { joke in
-                            OnlyFavJokeRow(favJoke: joke)
+                            JokeRow(favJoke: joke)
                         }
                     } else {
                         ForEach(jokes, id: \.id) { joke in
@@ -65,6 +65,6 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}

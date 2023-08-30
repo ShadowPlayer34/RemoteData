@@ -31,6 +31,11 @@ struct JokeRow: View {
                 Image(systemName: isFavorite ? "star.fill" : "star")
             }
         }
+        .task {
+            if favJoke != nil {
+                isFavorite = true
+            }
+        }
     }
 }
 
